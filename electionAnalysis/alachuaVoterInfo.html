@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+
+<!-- ===========================================================
+ * Alachua County Election Analysis 1.0.0
+ *
+ * https://github.com/mrkennedya/electionAnalysis
+ * Special thanks to Alvaro Trigo, the University of Florida and the Alachua County Supervisor of Elections
+ *
+ * Copyright (C) 2018 angelkennedy.net - A project by Angel Kennedy
+ *
+ * ========================================================== -->
+
+<head>
+
+  <!-- INITIAL META TAGS
+    =========================================================== -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>How Alachuans Voted in the 2018 Election</title>
+
+  <!-- STYLESHEET LINKS
+    =========================================================== -->
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700|Source+Sans+Pro:900">
+
+  <!-- Styles.css -->
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+  <div id="selection">
+    <p>Based on your selection:</p>
+
+    <div class="result" data-voterAge="18to30" data-voterParty="dem">
+      <p>You are one of 29,665 individuals between the age of 18-30 who voted for Democrats in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="18to30" data-voterParty="rep">
+      <p>You are one of 6,135 individuals between the age of 18-30 who voted for Republicans in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="18to30" data-voterParty="npa">
+      <p>You are one of 7,119 individuals between the age of 18-30 who voted for non-party candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="18to30" data-voterParty="other">
+      <p>You are one of 220 individuals between the age of 18-30 who voted for third-party candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="18to30" data-voterParty="lpf">
+      <p>You are one of 142 individuals between the age of 18-30 who voted for Libertarian candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="18to30" data-voterParty="green">
+      <p>You are one of 33 individuals between the age of 18-30 who voted for Green Party candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="18to30" data-voterParty="all">
+      <p>You are one of 29,665 individuals between the age of 18-30 who voted in the 2018 midterm election!</p>
+    </div>
+
+    <!-- 31-40 Voters -->
+
+    <div class="result" data-voterAge="31to40" data-voterParty="dem">
+      <p>You are one of 8,549 individuals between the age of 31-40 who voted for Democrats in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="31to40" data-voterParty="other">
+      <p>You are one of 4,175 individuals between the age of 31-40 who voted for Republicans in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="31to40" data-voterParty="npa">
+      <p>You are one of 3,861 individuals between the age of 31-40 who voted for non-party candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="31to40" data-voterParty="other">
+      <p>You are one of 87 individuals between the age of 31-40 who voted for third-party candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="31to40" data-voterParty="lpf">
+      <p>You are one of 105 individuals between the age of 31-40 who voted for Libertarian candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="31to40" data-voterParty="green">
+      <p>You are one of 28 individuals between the age of 31-40 who voted for Green Party candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="31to40" data-voterParty="all">
+      <p>You are one of 16,805 individuals between the age of 31-40 who voted in the 2018 midterm election!</p>
+    </div>
+
+    <!-- 41-50 Voters -->
+
+    <div class="result" data-voterAge="41to50" data-voterParty="dem">
+      <p>You are one of 7,175 individuals between the age of 41-50 who voted for Democrats in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="41to50" data-voterParty="rep">
+      <p>You are one of 4,923 individuals between the age of 41-50 who voted for Republicans in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="41to50" data-voterParty="npa">
+      <p>You are one of 3,157 individuals between the age of 41-50 who voted for non-party candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="41to50" data-voterParty="other">
+      <p>You are one of 64 individuals between the age of 41-50 who voted for third-party candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="41to50" data-voterParty="lpf">
+      <p>You are one of 80 individuals between the age of 41-50 who voted for Libertarian candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="41to50" data-voterParty="green">
+      <p>You are one of 17 individuals between the age of 41-50 who voted for Green Party candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="41to50" data-voterParty="all">
+      <p>You are one of 15,416 individuals between the age of 41-50 who voted in the 2018 midterm election!</p>
+    </div>
+
+    <!-- 51-60 Voters -->
+
+    <div class="result" data-voterAge="51to60" data-voterParty="dem">
+      <p>You are one of 8,848 individuals between the age of 51-60 who voted for Democrats in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="51to60" data-voterParty="other">
+      <p>You are one of 6,336 individuals between the age of 51-60 who voted for Republicans in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="51to60" data-voterParty="npa">
+      <p>You are one of 2,850 individuals between the age of 51-60 who voted for non-party candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="51to60" data-voterParty="other">
+      <p>You are one of 49 individuals between the age of 51-60 who voted for third-party candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="51to60" data-voterParty="lpf">
+      <p>You are one of 57 individuals between the age of 51-60 who voted for Libertarian candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="51to60" data-voterParty="green">
+      <p>You are one of seven individuals between the age of 51-60 who voted for Green Party candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="51to60" data-voterParty="all">
+      <p>You are one of 18,147 individuals between the age of 51-60 who voted in the 2018 midterm election!</p>
+    </div>
+
+    <!-- 51-60 Voters -->
+
+    <div class="result" data-voterAge="51to60" data-voterParty="dem">
+      <p>You are one of 8,848 individuals between the age of 51-60 who voted for Democrats in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="51to60" data-voterParty="rep">
+      <p>You are one of 6,336 individuals between the age of 51-60 who voted for Republicans in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="51to60" data-voterParty="npa">
+      <p>You are one of 2,850 individuals between the age of 51-60 who voted for non-party candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="51to60" data-voterParty="other">
+      <p>You are one of 49 individuals between the age of 51-60 who voted for third-party candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="51to60" data-voterParty="lpf">
+      <p>You are one of 57 individuals between the age of 51-60 who voted for Libertarian candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="51to60" data-voterParty="green">
+      <p>You are one of seven individuals between the age of 51-60 who voted for Green Party candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="51to60" data-voterParty="all">
+      <p>You are one of 18,147 individuals between the age of 51-60 who voted in the 2018 midterm election!</p>
+    </div>
+
+    <!-- 61+ Voters -->
+
+    <div class="result" data-voterAge="61andUp" data-voterParty="dem">
+      <p>You are one of 20,477 individuals over the age of 60 who voted for Democrats in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="61andUp" data-voterParty="other">
+      <p>You are one of 12,199 individuals over the age of 60 who voted for Republicans in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="61andUp" data-voterParty="npa">
+      <p>You are one of 4,091 individuals over the age of 60 who voted for non-party candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="61andUp" data-voterParty="other">
+      <p>You are one of 85 individuals over the age of 60 who voted for third-party candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="61andUp" data-voterParty="lpf">
+      <p>You are one of 51 individuals over the age of 60 who voted for Libertarian candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="61andUp" data-voterParty="green">
+      <p>You are one of 26 individuals over the age of 60 who voted for Green Party candidates in the 2018 midterm election!</p>
+    </div>
+
+    <div class="result" data-voterAge="61andUp" data-voterParty="all">
+      <p>You are one of 36,929 individuals over the age of 60 who voted in the 2018 midterm election!</p>
+    </div>
+
+  </div>
+
+
+  <div>
+    <!-- ETHNICITY + SEX + PARTY
+        =========================================================== -->
+
+    <!-- White Males -->
+
+    <div class="choice" data-voterEthnicity="white" data-voterSex="male" data-voterParty="dem">
+      <p>You are one of 14,778 white males who voted for Democrat candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="white" data-voterSex="male" data-voterParty="rep">
+      <p>You are one of 14,825 white males who voted for Republican candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="white" data-voterSex="male" data-voterParty="npa">
+      <p>You are one of 7,118 white males who voted for non-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="white" data-voterSex="male" data-voterParty="other">
+      <p>You are one of 163 white males who voted for third-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="white" data-voterSex="male" data-voterParty="lpf">
+      <p>You are one of 264 white males who voted for Libertarian candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="white" data-voterSex="male" data-voterParty="green">
+      <p>You are one of 41 white males who voted for Green Party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="white" data-voterSex="male" data-voterParty="all">
+      <p>You are one of 37,189 white males who voted in the 2018 general election!</p>
+    </div>
+
+    <!-- White Females -->
+
+    <div class="result" data-voterEthnicity="white" data-voterSex="female" data-voterParty="dem">
+      <p>You are one of 21,888 white females who voted for Democrat candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="white" data-voterSex="female" data-voterParty="rep">
+      <p>You are one of 15,083 white females who voted for Republican candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="white" data-voterSex="female" data-voterParty="npa">
+      <p>You are one of 6,343 white females who voted for non-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="white" data-voterSex="female" data-voterParty="other">
+      <p>You are one of 206 white females who voted for third-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="white" data-voterSex="female" data-voterParty="lpf">
+      <p>You are one of 107 white females who voted for Libertarian candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="white" data-voterSex="female" data-voterParty="green">
+      <p>You are one of 35 white females who voted for Green Party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="white" data-voterSex="female" data-voterParty="all">
+      <p>You are one of 43,662 white females who voted in the 2018 general election!</p>
+    </div>
+
+    <!-- White Individuals -->
+
+    <div class="result" data-voterEthnicity="white" data-voterSex="any" data-voterParty="dem">
+      <p>You are one of 37,091 white individuals who voted for Democrat candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="white" data-voterSex="any" data-voterParty="rep">
+      <p>You are one of 30,254 white individuals who voted for Republican candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="white" data-voterSex="any" data-voterParty="npa">
+      <p>You are one of 13,733 white individuals who voted for non-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="white" data-voterSex="any" data-voterParty="other">
+      <p>You are one of 372 white individuals who voted for third-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="white" data-voterSex="any" data-voterParty="lpf">
+      <p>You are one of 378 white individuals who voted for Libertarian candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="white" data-voterSex="any" data-voterParty="green">
+      <p>You are one of 80 white individuals who voted for Green Party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="white" data-voterSex="any" data-voterParty="all">
+      <p>You are one of 81,908 white individuals who voted in the 2018 general election!</p>
+    </div>
+
+
+    <!-- Black Males -->
+
+    <div class="result" data-voterEthnicity="black" data-voterSex="male" data-voterParty="dem">
+      <p>You are one of 4,901 black males who voted for Democrat candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="black" data-voterSex="male" data-voterParty="rep">
+      <p>You are one of 226 black males who voted for Republican candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="black" data-voterSex="male" data-voterParty="npa">
+      <p>You are one of 765 black males who voted for non-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="black" data-voterSex="male" data-voterParty="other">
+      <p>You are one of 12 black males who voted for third-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="black" data-voterSex="male" data-voterParty="lpf">
+      <p>You are one of five black males who voted for Libertarian candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="black" data-voterSex="male" data-voterParty="green">
+      <p>You are one of two black males who voted for Green Party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="black" data-voterSex="male" data-voterParty="all">
+      <p>You are one of 5,911 black males who voted in the 2018 general election!</p>
+    </div>
+
+    <!-- Black Females -->
+
+    <div class="result" data-voterEthnicity="black" data-voterSex="female" data-voterParty="dem">
+      <p>You are one of 10,205 black females who voted for Democrat candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="black" data-voterSex="female" data-voterParty="rep">
+      <p>You are one of 181 black females who voted for Republican candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="black" data-voterSex="female" data-voterParty="npa">
+      <p>You are one of 953 black females who voted for non-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="black" data-voterSex="female" data-voterParty="other">
+      <p>You are one of 25 black females who voted for third-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="black" data-voterSex="female" data-voterParty="lpf">
+      <p>You are one of three black females who voted for Libertarian candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="black" data-voterSex="female" data-voterParty="green">
+      <p>You are the only black female who voted for Green Party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="black" data-voterSex="female" data-voterParty="all">
+      <p>Then you are one of 43,662 white females who voted in the 2018 general election!</p>
+    </div>
+
+    <!-- Black Individuals -->
+
+    <div class="result" data-voterEthnicity="black" data-voterSex="any" data-voterParty="dem">
+      <p>You are one of 15,369 black individuals who voted for Democrat candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="black" data-voterSex="any" data-voterParty="rep">
+      <p>You are one of 411 black individuals who voted for Republican candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="black" data-voterSex="any" data-voterParty="npa">
+      <p>You are one of 1,772 black individuals who voted for non-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="black" data-voterSex="any" data-voterParty="other">
+      <p>You are one of 37 black individuals who voted for third-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="black" data-voterSex="any" data-voterParty="lpf">
+      <p>You are one of eight black individuals who voted for Libertarian candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="black" data-voterSex="any" data-voterParty="green">
+      <p>You are one of three black individuals who voted for Green Party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="black" data-voterSex="any" data-voterParty="all">
+      <p>You are one of 17,600 black individuals who voted in the 2018 general election!</p>
+    </div>
+
+
+    <!-- Hispanic Males -->
+
+    <div class="result" data-voterEthnicity="hispanic" data-voterSex="male" data-voterParty="dem">
+      <p>You are one of 1,447 hispanic males who voted for Democrat candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="hispanic" data-voterSex="male" data-voterParty="rep">
+      <p>You are one of 688 hispanic males who voted for Republican candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="hispanic" data-voterSex="male" data-voterParty="npa">
+      <p>You are one of 918 hispanic males who voted for non-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="hispanic" data-voterSex="male" data-voterParty="other">
+      <p>You are one of 26 hispanic males who voted for third-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="hispanic" data-voterSex="male" data-voterParty="lpf">
+      <p>You are one of eight hispanic males who voted for Libertarian candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="hispanic" data-voterSex="male" data-voterParty="green">
+      <p>You are one of five hispanic males who voted for Green Party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="hispanic" data-voterSex="male" data-voterParty="all">
+      <p>You are one of 3,092 hispanic males who voted in the 2018 general election!</p>
+    </div>
+
+    <!-- Hispanic Females -->
+
+    <div class="result" data-voterEthnicity="hispanic" data-voterSex="female" data-voterParty="dem">
+      <p>You are one of 2,335 hispanic females who voted for Democrat candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="hispanic" data-voterSex="female" data-voterParty="rep">
+      <p>You are one of 742 hispanic females who voted for Republican candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="hispanic" data-voterSex="female" data-voterParty="npa">
+      <p>You are one of 1,101 hispanic females who voted for non-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="hispanic" data-voterSex="female" data-voterParty="other">
+      <p>You are one of 25 hispanic females who voted for third-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="hispanic" data-voterSex="female" data-voterParty="lpf">
+      <p>You are one of eight hispanic females who voted for Libertarian candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="hispanic" data-voterSex="female" data-voterParty="green">
+      <p>You are one of five hispanic who voted for Green Party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="hispanic" data-voterSex="female" data-voterParty="all">
+      <p>Then you are one of 4,216 hispanic females who voted in the 2018 general election!</p>
+    </div>
+
+    <!-- Hispanic Individuals -->
+
+    <div class="result" data-voterEthnicity="hispanic" data-voterSex="any" data-voterParty="dem">
+      <p>You are one of 3,931 hispanic individuals who voted for Democrat candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="hispanic" data-voterSex="any" data-voterParty="rep">
+      <p>You are one of 1,483 hispanic individuals who voted for Republican candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="hispanic" data-voterSex="any" data-voterParty="npa">
+      <p>You are one of 2,101 hispanic individuals who voted for non-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="hispanic" data-voterSex="any" data-voterParty="other">
+      <p>You are one of 52 hispanic individuals who voted for third-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="hispanic" data-voterSex="any" data-voterParty="lpf">
+      <p>You are one of 17 hispanic individuals who voted for Libertarian candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="hispanic" data-voterSex="any" data-voterParty="green">
+      <p>You are one of 10 hispanic individuals who voted for Green Party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="hispanic" data-voterSex="any" data-voterParty="all">
+      <p>You are one of 7,594 hispanic individuals who voted in the 2018 general election!</p>
+    </div>
+
+
+    <!-- Native American Males -->
+
+    <div class="result" data-voterEthnicity="nativeAmer" data-voterSex="male" data-voterParty="dem">
+      <p>You are one of 64 Native American males who voted for Democrat candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="nativeAmer" data-voterSex="male" data-voterParty="rep">
+      <p>You are one of 67 Native American males who voted for Republican candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="nativeAmer" data-voterSex="male" data-voterParty="npa">
+      <p>You are one of 31 Native American males who voted for non-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="nativeAmer" data-voterSex="male" data-voterParty="other">
+      <p>You are the only Native American male who voted for third-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="nativeAmer" data-voterSex="male" data-voterParty="lpf">
+      <p>You are the only Native American male who voted for Libertarian candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="nativeAmer" data-voterSex="male" data-voterParty="green">
+      <p>You are the only Native American male who voted for Green Party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="nativeAmer" data-voterSex="male" data-voterParty="all">
+      <p>You are one of 165 Native American males who voted in the 2018 general election!</p>
+    </div>
+
+    <!-- Native American Females -->
+
+    <div class="result" data-voterEthnicity="nativeAmer" data-voterSex="female" data-voterParty="dem">
+      <p>You are one of 105 Native American females who voted for Democrat candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="nativeAmer" data-voterSex="female" data-voterParty="rep">
+      <p>You are one of 50 Native American females who voted for Republican candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="nativeAmer" data-voterSex="female" data-voterParty="npa">
+      <p>You are one of 35 Native American females who voted for non-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="nativeAmer" data-voterSex="female" data-voterParty="other">
+      <p>You are the only Native American female who voted for third-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="nativeAmer" data-voterSex="female" data-voterParty="lpf">
+      <p>There were no Native American females who voted for Libertarian candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="nativeAmer" data-voterSex="female" data-voterParty="green">
+      <p>You are the only Native American female who voted for Green Party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="nativeAmer" data-voterSex="female" data-voterParty="all">
+      <p>Then you are one of 192 Native American females who voted in the 2018 general election!</p>
+    </div>
+
+    <!-- Native American Individuals -->
+
+    <div class="result" data-voterEthnicity="nativeAmer" data-voterSex="any" data-voterParty="dem">
+      <p>You are one of 174 Native American individuals who voted for Democrat candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="nativeAmer" data-voterSex="any" data-voterParty="rep">
+      <p>You are one of 121 Native American individuals who voted for Republican candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="nativeAmer" data-voterSex="any" data-voterParty="npa">
+      <p>You are one of 67 Native American individuals who voted for non-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="nativeAmer" data-voterSex="any" data-voterParty="other">
+      <p>You are one of two Native American individuals who voted for third-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="nativeAmer" data-voterSex="any" data-voterParty="lpf">
+      <p>You are the only Native American individual who voted for Libertarian candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="nativeAmer" data-voterSex="any" data-voterParty="green">
+      <p>You are one of two Native American individuals who voted for Green Party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="nativeAmer" data-voterSex="any" data-voterParty="all">
+      <p>You are one of 367 Native American individuals who voted in the 2018 general election!</p>
+    </div>
+
+
+    <!-- Asian Males -->
+
+    <div class="result" data-voterEthnicity="asian" data-voterSex="male" data-voterParty="dem">
+      <p>You are one of 667 Asian males who voted for Democrat candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="asian" data-voterSex="male" data-voterParty="rep">
+      <p>You are one of 249 Asian males who voted for Republican candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="asian" data-voterSex="male" data-voterParty="npa">
+      <p>You are one of 636 Asian males who voted for non-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="asian" data-voterSex="male" data-voterParty="other">
+      <p>You are one of four Asian males who voted for third-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="asian" data-voterSex="male" data-voterParty="lpf">
+      <p>You are one of three Asian males who voted for Libertarian candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="asian" data-voterSex="male" data-voterParty="green">
+      <p>There were no Asian males who voted for Green Party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="asian" data-voterSex="male" data-voterParty="all">
+      <p>You are one of 1,559 Asian males who voted in the 2018 general election!</p>
+    </div>
+
+    <!-- Asian Females -->
+
+    <div class="result" data-voterEthnicity="asian" data-voterSex="female" data-voterParty="dem">
+      <p>You are one of 1,108 Asian females who voted for Democrat candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="asian" data-voterSex="female" data-voterParty="rep">
+      <p>You are one of 320 Asian females who voted for Republican candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="asian" data-voterSex="female" data-voterParty="npa">
+      <p>You are one of 755 Asian females who voted for non-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="asian" data-voterSex="female" data-voterParty="other">
+      <p>You are one of 11 Asian females who voted for third-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="asian" data-voterSex="female" data-voterParty="lpf">
+      <p>There were one of three Asian females who voted for Libertarian candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="asian" data-voterSex="female" data-voterParty="green">
+      <p>You are one of three Asian females who voted for Green Party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="asian" data-voterSex="female" data-voterParty="all">
+      <p>Then you are one of 2,200 Asian females who voted in the 2018 general election!</p>
+    </div>
+
+    <!-- Asian Individuals -->
+
+    <div class="result" data-voterEthnicity="asian" data-voterSex="any" data-voterParty="dem">
+      <p>You are one of 1,848 Asian individuals who voted for Democrat candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="asian" data-voterSex="any" data-voterParty="rep">
+      <p>You are one of 588 Asian individuals who voted for Republican candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="asian" data-voterSex="any" data-voterParty="npa">
+      <p>You are one of 1,476 Asian individuals who voted for non-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="asian" data-voterSex="any" data-voterParty="other">
+      <p>You are one of 15 Asian individuals who voted for third-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="asian" data-voterSex="any" data-voterParty="lpf">
+      <p>You are one of six Asian individuals who voted for Libertarian candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="asian" data-voterSex="any" data-voterParty="green">
+      <p>You are one of three Asian individuals who voted for Green Party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="asian" data-voterSex="any" data-voterParty="all">
+      <p>You are one of 3,936 Asian individuals who voted in the 2018 general election!</p>
+    </div>
+
+    <!-- Other Males -->
+
+    <div class="result" data-voterEthnicity="other" data-voterSex="male" data-voterParty="dem">
+      <p>You are one of 1,488 undefined males who voted for Democrat candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="other" data-voterSex="male" data-voterParty="rep">
+      <p>You are one of 660 undefined males who voted for Republican candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="other" data-voterSex="male" data-voterParty="npa">
+      <p>You are one of 1,217 undefined males who voted for non-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="other" data-voterSex="male" data-voterParty="other">
+      <p>You are one of 17 undefined males who voted for third-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="other" data-voterSex="male" data-voterParty="lpf">
+      <p>You are one of 20 undefined males who voted for Libertarian candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="other" data-voterSex="male" data-voterParty="green">
+      <p>You are one of 10 undefined males who voted for Green Party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="other" data-voterSex="male" data-voterParty="all">
+      <p>You are one of 3,412 undefined males who voted in the 2018 general election!</p>
+    </div>
+
+    <!-- Other Females -->
+
+    <div class="result" data-voterEthnicity="other" data-voterSex="female" data-voterParty="dem">
+      <p>You are one of 2,434 undefined females who voted for Democrat candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="other" data-voterSex="female" data-voterParty="rep">
+      <p>You are one of 711 undefined females who voted for Republican candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="other" data-voterSex="female" data-voterParty="npa">
+      <p>You are one of 1,333 undefined females who voted for non-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="other" data-voterSex="female" data-voterParty="other">
+      <p>You are one of 23 undefined females who voted for third-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="other" data-voterSex="female" data-voterParty="lpf">
+      <p>There were one of six undefined females who voted for Libertarian candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="other" data-voterSex="female" data-voterParty="green">
+      <p>You are one of seven undefined females who voted for Green Party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="other" data-voterSex="female" data-voterParty="all">
+      <p>Then you are one of 2,200 Asian females who voted in the 2018 general election!</p>
+    </div>
+
+    <!-- Other Individuals -->
+
+    <div class="result" data-voterEthnicity="other" data-voterSex="any" data-voterParty="dem">
+      <p>You are one of 4,674 undefined individuals who voted for Democrat candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="other" data-voterSex="any" data-voterParty="rep">
+      <p>You are one of 1,620 undefined individuals who voted for Republican candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="other" data-voterSex="any" data-voterParty="npa">
+      <p>You are one of 3,472 undefined individuals who voted for non-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="other" data-voterSex="any" data-voterParty="other">
+      <p>You are one of 44 undefined individuals who voted for third-party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="other" data-voterSex="any" data-voterParty="lpf">
+      <p>You are one of 32 undefined individuals who voted for Libertarian candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="other" data-voterSex="any" data-voterParty="green">
+      <p>You are one of 18 undefined individuals who voted for Green Party candidates in the 2018 general election!</p>
+    </div>
+
+    <div class="result" data-voterEthnicity="other" data-voterSex="any" data-voterParty="all">
+      <p>You are one of 9,860 undefined individuals who voted in the 2018 general election!</p>
+    </div>
+
+  </div>
+
+
+  <!-- SCRIPTS
+  =========================================================== -->
+
+  <!-- jQuery.js -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <!-- Main.js -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
